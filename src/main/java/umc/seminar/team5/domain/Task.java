@@ -23,4 +23,7 @@ public class Task {
 
     @Enumerated(EnumType.STRING)
     private Status status;
+
+    @ManyToOne
+    private Member member;
 }

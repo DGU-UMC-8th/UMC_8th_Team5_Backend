@@ -5,8 +5,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import umc.wb.apiPayload.code.BaseCode;
-import umc.wb.apiPayload.code.status.SuccessStatus;
+import umc.seminar.team5.apiPayload.code.BaseCode;
+import umc.seminar.team5.apiPayload.code.status.SuccessStatus;
+
 
 @Getter
 @AllArgsConstructor
