@@ -13,8 +13,7 @@ public class ReviewResponse {
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class JoinResult {
-        private Long MemberId;
+    public static class CreateResult {
         private String title;
         private LocalDateTime createdAt;
         private String content;

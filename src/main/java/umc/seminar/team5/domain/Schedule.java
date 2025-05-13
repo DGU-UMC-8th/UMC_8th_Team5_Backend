@@ -13,11 +13,11 @@ public class Schedule {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
     @OneToOne
+    @JoinColumn(name = "task_id")
     private Task task;
 
-    private Integer day;
+    private Integer duration;
 
     private Integer page;
 }

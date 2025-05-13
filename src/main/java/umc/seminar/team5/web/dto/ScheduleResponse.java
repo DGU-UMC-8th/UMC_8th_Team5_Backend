@@ -13,15 +13,9 @@ public class ScheduleResponse {
     @AllArgsConstructor
     @NoArgsConstructor
     public static class CreateResult{
-        @Getter
-        @Builder
-        @NoArgsConstructor
-        @AllArgsConstructor
-        public static class JoinResult {
-            private Long taskId;
-            private String taskName;
-            private Integer day;
-            private Integer page;
-        }
+        private Long taskId;
+        private String taskName;
+        private Integer day;
+        private Integer page;
     }
 }

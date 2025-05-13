@@ -25,6 +25,7 @@ public class Member {
     private String phone;
 
     @OneToMany(mappedBy = "member")
+    @Builder.Default
     private List<Task> tasks = new ArrayList<>();
 
     public void addTask(Task task) {

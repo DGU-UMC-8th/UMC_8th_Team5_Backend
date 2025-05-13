@@ -11,6 +11,7 @@ import umc.seminar.team5.domain.Task;
 import umc.seminar.team5.service.MemberService;
 import umc.seminar.team5.service.TaskService;
 import umc.seminar.team5.web.dto.TaskRequest;
+import umc.seminar.team5.web.dto.TaskResponse;
 
 @RestController
 @RequiredArgsConstructor
@@ -21,8 +22,16 @@ public class TaskRestController {
     private final MemberService memberService;
 
     @PostMapping
-    public ApiResponse<TaskResponse.CreateResult> createTask(@Valid @RequestBody TaskRequest taskRequest) {
+    public TaskResponse.CreateResult createTask(@Valid @RequestBody TaskRequest.CreateRequest request) {
         Member member = memberService.findById(request.getMemberId());
         Task task = taskService.createTask(request, member);
+        return TaskResponse.CreateResult.builder()
+                .Id(task.getId())
+                .title(task.getTitle())
+                .dueDate(task.getDueDate())
+                .instruction(task.getInstruction())
+                .MemberId(task.getMember().getId())
+                .status(task.getStatus())
+                .build();
     }
 }

@@ -36,10 +36,17 @@ dependencies {
 
 	runtimeOnly 'com.h2database:h2'
 
-	// swagger
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
+//	// swagger
+//	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+configurations.all {
+	resolutionStrategy {
+		force 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
+		force 'org.springframework:spring-web:6.1.5' // 예: Spring Boot 3.4.5에 대응되는 버전
+	}
 }

@@ -16,7 +16,7 @@ public class TaskResponse {
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class JoinResult {
+    public static class CreateResult {
         private Long Id;
         private Long MemberId;
         private String title;

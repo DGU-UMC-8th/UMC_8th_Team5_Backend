@@ -21,6 +21,7 @@ public class Review extends BaseEntity {
 
     private String content;
 
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "task_id")  // ✅ 외래 키 명시
     private Task task;
 }

@@ -24,6 +24,6 @@ public class MemberService {
     }
 
     public Member findById(Long id){
-        return memberRepository.findById(id).orElseThrow(()->new IllegalArgumentException("member not found"))
+        return memberRepository.findById(id).orElseThrow(()->new IllegalArgumentException("member not found"));
     }
 }

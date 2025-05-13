@@ -1,6 +1,10 @@
 spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
   datasource:
+    url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
-    url: 'jdbc:h2:mem:test'   # H2 DB 연결 주소 (In-Memory Mode)
-    username: 5       # H2 DB 접속 ID (사용자 지정)
-    password: 5
+    username: sa
+    password:
